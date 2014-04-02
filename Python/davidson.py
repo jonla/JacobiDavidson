@@ -26,23 +26,26 @@ def davidsolver(A, guess, iterations, N_gmres, eps):
     n = len(A)
     u = V
     for m in range(iterations):
+
+        ## CORRECTION EQUATION
         startCEQ = time.time()
         # t = solvecorrectioneq(A, u, theta, r, n)
-        print np.diag(np.diag(A) - theta * np.ones(n))
-        K = np.diag(np.diag(A) - theta)
-        print np.shape(K)
+        K = np.diag(np.diag(A)) - theta*np.identity(n)
         t = gmres(A, K, u, r, theta, N_gmres)
         timeCEQ = timeCEQ + time.time() - startCEQ
+
+        ## MOD. GRAM-SCHMIDT
         vplus = modgramshmidt(t, V)
+
+        ## CONSTRUCT M, EXPAND V
         M = np.vstack([np.hstack([M, dot(V.T, dot(A, vplus))]),
                        np.hstack([dot(vplus.T, dot(A, V)),
                                   dot(vplus.T, dot(A, vplus))])])
 
         V = np.hstack((V, vplus))
 
-        # theta, s = largestEig(M, 100)
+        ## SELECT EIGENPAIR OF M, CALCULATE u AND r
         evals, evecs = np.linalg.eig(M)
-
         # thetai = abs(evals - theta1).argmin()
         # thetai = abs(evals).argmax()
         thetai = abs(evecs[0, :]).argmax()
@@ -108,6 +111,7 @@ def modgramshmidt(tin, V, kappah=0.25):
 
 
 def gmres(A, K, u, r, theta, iter):
+
     # Parameters needed
     I = np.identity(len(u))  # Hoping this is saved as sparse?
     uhat = np.linalg.solve(K, u)
@@ -121,25 +125,26 @@ def gmres(A, K, u, r, theta, iter):
     W = np.zeros([len(u), 0])
 
     for i in range(iter):
+        # print 'GMRES iteration:', i
         y = dot((A - theta * I), V[:, i])
         yhat = np.linalg.solve(K, y)
         # W[:, i] = yhat - dot(u.T, yhat) / mu * uhat
         W = np.append(W, yhat - dot(u.T, yhat) / mu * uhat, 1)
-        H = np.zeros([i + 2, i + 1])
+        H = np.zeros([i + 2, i + 1], dtype=complex)
 
         for j in range(i):
             H[j, i] = dot(W[:, i], V[:, j])
             W[:, j] = W[:, j] - H[j, i] * V[:, j]
 
-        H[i + 1, 1] = norm(W[:, i])
+        H[i + 1, i] = norm(W[:, i])
         b = np.append(np.array([[beta]]), np.zeros([i + 1, 1]), 0)
-        y = np.linalg.solve(H, b)
-        V[:, i + 1] = W[:, i] / H[i + 1, i]
+        y = np.linalg.lstsq(H, b)[0]
+        V = np.append(V, W[:, [i]] / H[i + 1, i], 1)
 
-    return dot(V, y)
+    return dot(V[:, :-1], y)
 
 
-def davidsontest(k=100, TOL=1.e-3, N=45, hermitian=True, real=True,
+def davidsontest(k=100, TOL=1.e-3, N=45, hermitian=False, real=False,
                  target=18, guessoffset=0.15):
 
     print 50 * '-'
