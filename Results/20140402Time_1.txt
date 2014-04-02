@@ -1,0 +1,201 @@
+ans =
+    1.0000    0.0012
+ans =
+    1.0000    0.8710
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 10
+  In JD_gminres at 115
+  In RunJD at 63] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 12
+  In JD_gminres at 115
+  In RunJD at 63] 
+create_rtilde_time =
+    0.0038
+create_y_time =
+    5.9758
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 115
+  In RunJD at 63] 
+build_wk_time =
+    0.0033
+build_H_time =
+    0.0020
+solve_y_time =
+   9.2000e-04
+create_y_time =
+   11.9807
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 115
+  In RunJD at 63] 
+build_wk_time =
+    0.0060
+build_H_time =
+    0.0033
+solve_y_time =
+   9.9800e-04
+create_y_time =
+   17.9760
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 115
+  In RunJD at 63] 
+build_wk_time =
+    0.0087
+build_H_time =
+    0.0051
+solve_y_time =
+    0.0011
+create_y_time =
+   23.9619
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 115
+  In RunJD at 63] 
+build_wk_time =
+    0.0112
+build_H_time =
+    0.0071
+solve_y_time =
+    0.0012
+create_y_time =
+   29.9664
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.947674e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 115
+  In RunJD at 63] 
+build_wk_time =
+    0.0136
+build_H_time =
+    0.0095
+solve_y_time =
+    0.0013
+ans =
+    1.0000   32.3887
+ans =
+    1.0000    0.0043
+ans =
+    1.0000    2.4201
+ans =
+    2.0000    0.0017
+ans =
+    2.0000    1.7186
+create_rtilde_time =
+    0.0022
+create_y_time =
+    6.0261
+build_wk_time =
+    0.0022
+build_H_time =
+    0.0011
+solve_y_time =
+   7.1000e-05
+create_y_time =
+   12.0981
+build_wk_time =
+    0.0045
+build_H_time =
+    0.0024
+solve_y_time =
+   1.5800e-04
+create_y_time =
+   18.1312
+build_wk_time =
+    0.0068
+build_H_time =
+    0.0041
+solve_y_time =
+   2.3900e-04
+create_y_time =
+   24.1434
+build_wk_time =
+    0.0090
+build_H_time =
+    0.0061
+solve_y_time =
+   3.2400e-04
+create_y_time =
+   30.1269
+build_wk_time =
+    0.0111
+build_H_time =
+    0.0090
+solve_y_time =
+   4.2400e-04
+ans =
+    2.0000   64.9600
+ans =
+    2.0000    0.0093
+ans =
+    2.0000    6.4540
+ans =
+    3.0000    0.4605
+ans =
+    3.0000    2.5972
+create_rtilde_time =
+    0.0021
+create_y_time =
+    6.0753
+build_wk_time =
+    0.0022
+build_H_time =
+    0.0013
+solve_y_time =
+   8.1000e-05
+create_y_time =
+   12.1617
+build_wk_time =
+    0.0047
+build_H_time =
+    0.0028
+solve_y_time =
+   1.7100e-04
+create_y_time =
+   18.1620
+build_wk_time =
+    0.0074
+build_H_time =
+    0.0048
+solve_y_time =
+   2.6300e-04
+create_y_time =
+   24.1540
+build_wk_time =
+    0.0095
+build_H_time =
+    0.0073
+solve_y_time =
+   3.5900e-04
+create_y_time =
+   30.2544
+build_wk_time =
+    0.0117
+build_H_time =
+    0.0102
+solve_y_time =
+   4.5700e-04
+ans =
+    3.0000   97.6806
+ans =
+    3.0000    0.0158
+ans =
+    3.0000   12.1098
+ans =
+    4.0000    0.4607
+ans =
+    4.0000    3.4727
+JD_Time =
+  145.1593
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5881 - 0.0046i
