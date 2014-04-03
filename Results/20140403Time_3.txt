@@ -1,0 +1,466 @@
+Tol =
+     1.000000000000000e-10
+ans =
+   1.000000000000000   0.000888000000000
+ans =
+   1.000000000000000   1.405989000000000
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 10
+  In JD_gminres at 113
+  In RunJD at 63] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 12
+  In JD_gminres at 113
+  In RunJD at 63] 
+create_rtilde_time =
+   0.007208000000000
+create_y_time =
+   6.501398000000000
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+   0.002629000000000
+build_H_time =
+   0.003101000000000
+solve_y_time =
+     6.900000000000000e-05
+create_y_time =
+  12.397898999999999
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+   0.005296000000000
+build_H_time =
+   0.004509000000000
+solve_y_time =
+     1.580000000000000e-04
+create_y_time =
+  19.680957999999997
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+   0.014906000000000
+build_H_time =
+   0.005783000000000
+solve_y_time =
+     2.280000000000000e-04
+create_y_time =
+  25.504561999999996
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+   0.016871000000000
+build_H_time =
+   0.008953000000000
+solve_y_time =
+     3.090000000000000e-04
+create_y_time =
+  31.167147999999997
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.972273e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+   0.018917000000000
+build_H_time =
+   0.012784000000000
+solve_y_time =
+     3.990000000000000e-04
+ans =
+   1.000000000000000  33.053420000000003
+ans =
+   1.000000000000000   0.004770000000000
+ans =
+   1.000000000000000   5.038173000000000
+ans =
+   2.000000000000000   0.001296000000000
+ans =
+   2.000000000000000   3.090240000000000
+create_rtilde_time =
+   0.002113000000000
+create_y_time =
+   6.712690000000000
+build_wk_time =
+   0.002457000000000
+build_H_time =
+     8.010000000000000e-04
+solve_y_time =
+     6.200000000000000e-05
+create_y_time =
+  20.166837999999998
+build_wk_time =
+   0.007653000000000
+build_H_time =
+   0.002701000000000
+solve_y_time =
+     1.570000000000000e-04
+create_y_time =
+  35.456581000000000
+build_wk_time =
+   0.011083000000000
+build_H_time =
+   0.005618000000000
+solve_y_time =
+     2.340000000000000e-04
+create_y_time =
+  48.400063000000003
+build_wk_time =
+   0.013398000000000
+build_H_time =
+   0.007516000000000
+solve_y_time =
+     3.230000000000000e-04
+create_y_time =
+  61.107747000000003
+build_wk_time =
+   0.015567000000000
+build_H_time =
+   0.009631000000000
+solve_y_time =
+     3.850000000000000e-04
+ans =
+   2.000000000000000  95.924892000000000
+ans =
+   2.000000000000000   0.009978000000000
+ans =
+   2.000000000000000  24.613612000000000
+ans =
+   3.000000000000000   0.001383000000000
+ans =
+   3.000000000000000   7.130254000000000
+create_rtilde_time =
+   0.001899000000000
+create_y_time =
+   8.180955000000001
+build_wk_time =
+   0.001640000000000
+build_H_time =
+   0.001019000000000
+solve_y_time =
+     6.300000000000000e-05
+create_y_time =
+  16.712642000000002
+build_wk_time =
+   0.004088000000000
+build_H_time =
+   0.002243000000000
+solve_y_time =
+     1.250000000000000e-04
+create_y_time =
+  26.094870000000000
+build_wk_time =
+   0.005876000000000
+build_H_time =
+   0.003376000000000
+solve_y_time =
+     2.130000000000000e-04
+create_y_time =
+  36.182600999999998
+build_wk_time =
+   0.008051000000000
+build_H_time =
+   0.005146000000000
+solve_y_time =
+     2.760000000000000e-04
+create_y_time =
+  47.795018999999996
+build_wk_time =
+   0.009546000000000
+build_H_time =
+   0.006670000000000
+solve_y_time =
+     3.360000000000000e-04
+ans =
+   1.0e+02 *
+   0.030000000000000   1.453923510000000
+ans =
+   3.000000000000000   0.014322000000000
+ans =
+   3.000000000000000  47.782243999999999
+ans =
+   4.000000000000000   0.001526000000000
+ans =
+   4.000000000000000   9.598534000000001
+create_rtilde_time =
+   0.005632000000000
+create_y_time =
+  13.542823000000000
+build_wk_time =
+   0.003033000000000
+build_H_time =
+   0.001633000000000
+solve_y_time =
+     1.010000000000000e-04
+create_y_time =
+  28.799901999999999
+build_wk_time =
+   0.007157000000000
+build_H_time =
+   0.003919000000000
+solve_y_time =
+     5.120000000000000e-04
+create_y_time =
+  43.475937999999999
+build_wk_time =
+   0.011967000000000
+build_H_time =
+   0.006301000000000
+solve_y_time =
+     6.140000000000000e-04
+create_y_time =
+  59.810456000000002
+build_wk_time =
+   0.014961000000000
+build_H_time =
+   0.011214000000000
+solve_y_time =
+     7.050000000000000e-04
+create_y_time =
+  75.355362000000000
+build_wk_time =
+   0.017626000000000
+build_H_time =
+   0.016409000000000
+solve_y_time =
+     8.650000000000000e-04
+ans =
+   1.0e+02 *
+   0.040000000000000   2.231807260000000
+ans =
+   4.000000000000000   0.025626000000000
+ans =
+   4.000000000000000  92.100104000000002
+ans =
+   5.000000000000000   0.001653000000000
+ans =
+   5.000000000000000  14.405379000000000
+create_rtilde_time =
+   0.002509000000000
+create_y_time =
+  15.536889000000000
+build_wk_time =
+   0.003030000000000
+build_H_time =
+   0.001527000000000
+solve_y_time =
+     6.499999999999999e-05
+create_y_time =
+  30.753305000000001
+build_wk_time =
+   0.006326000000000
+build_H_time =
+   0.004315000000000
+solve_y_time =
+     2.110000000000000e-04
+create_y_time =
+  46.773536000000000
+build_wk_time =
+   0.011884000000000
+build_H_time =
+   0.007153000000000
+solve_y_time =
+     2.970000000000000e-04
+create_y_time =
+  61.786138999999999
+build_wk_time =
+   0.015114000000000
+build_H_time =
+   0.010778000000000
+solve_y_time =
+     4.299999999999999e-04
+create_y_time =
+  78.362948000000003
+build_wk_time =
+   0.065795000000000
+build_H_time =
+   0.028047000000000
+solve_y_time =
+     5.059999999999999e-04
+ans =
+   1.0e+02 *
+   0.050000000000000   3.037703250000000
+ans =
+   5.000000000000000   0.041011000000000
+ans =
+   1.0e+02 *
+   0.050000000000000   1.430797590000000
+ans =
+   6.000000000000000   0.001818000000000
+ans =
+   6.000000000000000  19.335578999999999
+create_rtilde_time =
+   0.006764000000000
+create_y_time =
+  15.867635999999999
+build_wk_time =
+   0.006293000000000
+build_H_time =
+   0.001172000000000
+solve_y_time =
+     7.900000000000000e-05
+create_y_time =
+  30.936954000000000
+build_wk_time =
+   0.012751000000000
+build_H_time =
+   0.002808000000000
+solve_y_time =
+     1.520000000000000e-04
+create_y_time =
+  45.838357000000002
+build_wk_time =
+   0.016952000000000
+build_H_time =
+   0.005785000000000
+solve_y_time =
+     2.780000000000000e-04
+create_y_time =
+  61.770280000000000
+build_wk_time =
+   0.019942000000000
+build_H_time =
+   0.008782000000000
+solve_y_time =
+     4.220000000000001e-04
+create_y_time =
+  76.483344000000002
+build_wk_time =
+   0.025772000000000
+build_H_time =
+   0.015119000000000
+solve_y_time =
+     5.430000000000001e-04
+ans =
+   1.0e+02 *
+   0.060000000000000   3.820991960000000
+ans =
+   6.000000000000000   0.055666000000000
+ans =
+   1.0e+02 *
+   0.060000000000000   2.067352330000000
+ans =
+   7.000000000000000   0.001960000000000
+ans =
+   7.000000000000000  24.103871999999999
+create_rtilde_time =
+   0.002360000000000
+create_y_time =
+  15.211499000000000
+build_wk_time =
+   0.010267000000000
+build_H_time =
+   0.001770000000000
+solve_y_time =
+     1.370000000000000e-04
+create_y_time =
+  31.704138000000000
+build_wk_time =
+   0.014453000000000
+build_H_time =
+   0.003653000000000
+solve_y_time =
+     2.640000000000000e-04
+create_y_time =
+  47.005969000000000
+build_wk_time =
+   0.017730000000000
+build_H_time =
+   0.007515000000000
+solve_y_time =
+     3.490000000000000e-04
+create_y_time =
+  63.032626000000000
+build_wk_time =
+   0.020816000000000
+build_H_time =
+   0.012030000000000
+solve_y_time =
+     4.900000000000000e-04
+create_y_time =
+  77.629897999999997
+build_wk_time =
+   0.023487000000000
+build_H_time =
+   0.017230000000000
+solve_y_time =
+     5.750000000000000e-04
+ans =
+   1.0e+02 *
+   0.070000000000000   4.623254980000000
+ans =
+   7.000000000000000   0.067751000000000
+ans =
+   1.0e+02 *
+   0.070000000000000   2.777740750000000
+ans =
+   8.000000000000000   0.002155000000000
+ans =
+   8.000000000000000  28.981293999999998
+create_rtilde_time =
+   0.003199000000000
+create_y_time =
+  15.722094000000000
+build_wk_time =
+   0.003460000000000
+build_H_time =
+   0.002027000000000
+solve_y_time =
+     1.220000000000000e-04
+create_y_time =
+  29.929839000000001
+build_wk_time =
+   0.011812000000000
+build_H_time =
+   0.005540000000000
+solve_y_time =
+     1.910000000000000e-04
+create_y_time =
+  45.549185999999999
+build_wk_time =
+   0.015768000000000
+build_H_time =
+   0.008232000000000
+solve_y_time =
+     3.420000000000000e-04
+create_y_time =
+  60.866371999999998
+build_wk_time =
+   0.019345000000000
+build_H_time =
+   0.013306000000000
+solve_y_time =
+     4.290000000000000e-04
+create_y_time =
+  75.481275999999994
+build_wk_time =
+   0.022503000000000
+build_H_time =
+   0.016865000000000
+solve_y_time =
+     5.070000000000000e-04
+ans =
+   1.0e+02 *
+   0.080000000000000   5.396876850000001
+ans =
+   8.000000000000000   0.081588000000000
+ans =
+   1.0e+02 *
+   0.080000000000000   3.589976790000000
+ans =
+   9.000000000000000   0.002311000000000
+ans =
+   9.000000000000000  33.693629999999999
+JD_Time =
+     1.058052854000000e+03
+JD complete!
+Found eigenvalue:
+lambda =
+  0.592785761391912 - 0.000104765040670i
