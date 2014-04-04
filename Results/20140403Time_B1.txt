@@ -1,0 +1,719 @@
+
+Tol =
+
+   1.0000e-10
+
+ans =
+    1.0000    0.0143
+ans =
+    1.0000    1.4588
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 10
+  In JD_gminres at 113
+  In RunJD at 63] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 12
+  In JD_gminres at 113
+  In RunJD at 63] 
+create_rtilde_time =
+    0.0047
+create_y_time =
+    5.4822
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+    0.0029
+build_H_time =
+    0.0014
+solve_y_time =
+    0.0028
+create_y_time =
+   10.8110
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+    0.0049
+build_H_time =
+    0.0023
+solve_y_time =
+    0.0029
+create_y_time =
+   16.3190
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+    0.0070
+build_H_time =
+    0.0035
+solve_y_time =
+    0.0030
+create_y_time =
+   21.6394
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+    0.0090
+build_H_time =
+    0.0051
+solve_y_time =
+    0.0030
+create_y_time =
+   27.1366
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.300220e-17.] 
+[> In dogmres at 26
+  In JD_gminres at 113
+  In RunJD at 63] 
+build_wk_time =
+    0.0108
+build_H_time =
+    0.0068
+solve_y_time =
+    0.0031
+ans =
+    1.0000   28.7772
+ans =
+    1.0000    0.0027
+ans =
+    1.0000    4.4717
+ans =
+    2.0000    0.0153
+ans =
+    2.0000    2.9458
+create_rtilde_time =
+    0.0016
+create_y_time =
+    5.3355
+build_wk_time =
+    0.0017
+build_H_time =
+   9.8700e-04
+solve_y_time =
+   6.1000e-05
+create_y_time =
+   10.7630
+build_wk_time =
+    0.0034
+build_H_time =
+    0.0020
+solve_y_time =
+   1.3000e-04
+create_y_time =
+   16.2082
+build_wk_time =
+    0.0053
+build_H_time =
+    0.0033
+solve_y_time =
+   1.9000e-04
+create_y_time =
+   21.4502
+build_wk_time =
+    0.0067
+build_H_time =
+    0.0046
+solve_y_time =
+   2.4800e-04
+create_y_time =
+   26.9248
+build_wk_time =
+    0.0083
+build_H_time =
+    0.0065
+solve_y_time =
+   3.2600e-04
+ans =
+    2.0000   57.3573
+ans =
+    2.0000    0.0074
+ans =
+    2.0000   11.5799
+ans =
+    3.0000    0.0154
+ans =
+    3.0000    4.3335
+create_rtilde_time =
+    0.0021
+create_y_time =
+    5.4308
+build_wk_time =
+    0.0016
+build_H_time =
+   9.6800e-04
+solve_y_time =
+   5.4000e-05
+create_y_time =
+   11.9980
+build_wk_time =
+    0.0033
+build_H_time =
+    0.0018
+solve_y_time =
+   1.1400e-04
+create_y_time =
+   19.7218
+build_wk_time =
+    0.0052
+build_H_time =
+    0.0032
+solve_y_time =
+   1.8600e-04
+create_y_time =
+   26.3861
+build_wk_time =
+    0.0068
+build_H_time =
+    0.0045
+solve_y_time =
+   2.4600e-04
+create_y_time =
+   34.2402
+build_wk_time =
+    0.0084
+build_H_time =
+    0.0064
+solve_y_time =
+   3.2300e-04
+ans =
+    3.0000   93.3337
+ans =
+    3.0000    0.0121
+ans =
+    3.0000   32.8661
+ans =
+    4.0000    0.0155
+ans =
+    4.0000    8.3936
+create_rtilde_time =
+    0.0021
+create_y_time =
+    7.8782
+build_wk_time =
+    0.0024
+build_H_time =
+   9.8200e-04
+solve_y_time =
+   5.7000e-05
+create_y_time =
+   15.5780
+build_wk_time =
+    0.0042
+build_H_time =
+    0.0021
+solve_y_time =
+   1.2900e-04
+create_y_time =
+   26.6925
+build_wk_time =
+    0.0068
+build_H_time =
+    0.0037
+solve_y_time =
+   1.9400e-04
+create_y_time =
+   34.3875
+build_wk_time =
+    0.0083
+build_H_time =
+    0.0053
+solve_y_time =
+   2.6800e-04
+create_y_time =
+   42.4867
+build_wk_time =
+    0.0111
+build_H_time =
+    0.0089
+solve_y_time =
+   5.1700e-04
+ans =
+    4.0000  137.4995
+ans =
+    4.0000    0.0238
+ans =
+    4.0000   65.4141
+ans =
+    5.0000    0.0156
+ans =
+    5.0000   12.0267
+create_rtilde_time =
+    0.0025
+create_y_time =
+    8.7937
+build_wk_time =
+    0.0023
+build_H_time =
+    0.0012
+solve_y_time =
+   8.3000e-05
+create_y_time =
+   17.6055
+build_wk_time =
+    0.0046
+build_H_time =
+    0.0023
+solve_y_time =
+   1.4700e-04
+create_y_time =
+   26.3800
+build_wk_time =
+    0.0074
+build_H_time =
+    0.0041
+solve_y_time =
+   2.4200e-04
+create_y_time =
+   35.7838
+build_wk_time =
+    0.0090
+build_H_time =
+    0.0057
+solve_y_time =
+   3.0700e-04
+create_y_time =
+   44.8952
+build_wk_time =
+    0.0113
+build_H_time =
+    0.0083
+solve_y_time =
+   4.2600e-04
+ans =
+    5.0000  184.0803
+ans =
+    5.0000    0.0365
+ans =
+    5.0000  104.9986
+ans =
+    6.0000    0.0157
+ans =
+    6.0000   16.0123
+create_rtilde_time =
+    0.0015
+create_y_time =
+    6.6337
+build_wk_time =
+    0.0016
+build_H_time =
+    0.0010
+solve_y_time =
+   6.3000e-05
+create_y_time =
+   16.3166
+build_wk_time =
+    0.0039
+build_H_time =
+    0.0022
+solve_y_time =
+   1.1800e-04
+create_y_time =
+   26.5852
+build_wk_time =
+    0.0070
+build_H_time =
+    0.0042
+solve_y_time =
+   2.2500e-04
+create_y_time =
+   36.5891
+build_wk_time =
+    0.0096
+build_H_time =
+    0.0062
+solve_y_time =
+   2.9700e-04
+create_y_time =
+   44.2683
+build_wk_time =
+    0.0112
+build_H_time =
+    0.0080
+solve_y_time =
+   3.7200e-04
+ans =
+    6.0000  229.9988
+ans =
+    6.0000    0.0439
+ans =
+    6.0000  147.6964
+ans =
+    7.0000    0.0159
+ans =
+    7.0000   19.9417
+create_rtilde_time =
+    0.0021
+create_y_time =
+    7.4135
+build_wk_time =
+    0.0020
+build_H_time =
+   9.1500e-04
+solve_y_time =
+   5.1000e-05
+create_y_time =
+   18.2575
+build_wk_time =
+    0.0038
+build_H_time =
+    0.0018
+solve_y_time =
+   1.2000e-04
+create_y_time =
+   24.8002
+build_wk_time =
+    0.0064
+build_H_time =
+    0.0033
+solve_y_time =
+   1.7800e-04
+create_y_time =
+   36.4129
+build_wk_time =
+    0.0079
+build_H_time =
+    0.0046
+solve_y_time =
+   2.4100e-04
+create_y_time =
+   44.3592
+build_wk_time =
+    0.0100
+build_H_time =
+    0.0067
+solve_y_time =
+   3.0300e-04
+ans =
+    7.0000  276.0930
+ans =
+    7.0000    0.0532
+ans =
+    7.0000  202.8435
+ans =
+    8.0000    0.0160
+ans =
+    8.0000   23.8666
+create_rtilde_time =
+    0.0014
+create_y_time =
+    7.7432
+build_wk_time =
+    0.0024
+build_H_time =
+    0.0013
+solve_y_time =
+   8.7000e-05
+create_y_time =
+   17.1572
+build_wk_time =
+    0.0045
+build_H_time =
+    0.0022
+solve_y_time =
+   1.5400e-04
+create_y_time =
+   26.4519
+build_wk_time =
+    0.0071
+build_H_time =
+    0.0037
+solve_y_time =
+   2.1300e-04
+create_y_time =
+   35.3714
+build_wk_time =
+    0.0093
+build_H_time =
+    0.0055
+solve_y_time =
+   2.9500e-04
+create_y_time =
+   44.9468
+build_wk_time =
+    0.0108
+build_H_time =
+    0.0073
+solve_y_time =
+   3.6900e-04
+ans =
+    8.0000  322.7712
+ans =
+    8.0000    0.0648
+ans =
+    8.0000  265.8010
+ans =
+    9.0000    0.0162
+ans =
+    9.0000   28.0970
+create_rtilde_time =
+    0.0020
+create_y_time =
+    8.0925
+build_wk_time =
+    0.0021
+build_H_time =
+    0.0010
+solve_y_time =
+   5.8000e-05
+create_y_time =
+   17.2543
+build_wk_time =
+    0.0047
+build_H_time =
+    0.0024
+solve_y_time =
+   1.4900e-04
+create_y_time =
+   27.4692
+build_wk_time =
+    0.0072
+build_H_time =
+    0.0039
+solve_y_time =
+   2.0700e-04
+create_y_time =
+   34.7433
+build_wk_time =
+    0.0095
+build_H_time =
+    0.0057
+solve_y_time =
+   2.9300e-04
+create_y_time =
+   45.2222
+build_wk_time =
+    0.0110
+build_H_time =
+    0.0072
+solve_y_time =
+   3.5800e-04
+ans =
+    9.0000  369.7117
+ans =
+    9.0000    0.0757
+ans =
+    9.0000  337.7658
+ans =
+   10.0000    0.0163
+ans =
+   10.0000   32.1250
+create_rtilde_time =
+    0.0019
+create_y_time =
+    8.7892
+build_wk_time =
+    0.0024
+build_H_time =
+    0.0013
+solve_y_time =
+   8.6000e-05
+create_y_time =
+   18.4009
+build_wk_time =
+    0.0050
+build_H_time =
+    0.0025
+solve_y_time =
+   1.6800e-04
+create_y_time =
+   27.3256
+build_wk_time =
+    0.0068
+build_H_time =
+    0.0035
+solve_y_time =
+   2.2400e-04
+create_y_time =
+   38.2763
+build_wk_time =
+    0.0083
+build_H_time =
+    0.0052
+solve_y_time =
+   2.9900e-04
+create_y_time =
+   46.2777
+build_wk_time =
+    0.0099
+build_H_time =
+    0.0070
+solve_y_time =
+   3.6600e-04
+ans =
+   10.0000  417.7079
+ans =
+   10.0000    0.0890
+ans =
+   10.0000  420.2310
+ans =
+   11.0000    0.0166
+ans =
+   11.0000   36.6312
+create_rtilde_time =
+    0.0023
+create_y_time =
+    7.7710
+build_wk_time =
+    0.0016
+build_H_time =
+   8.2900e-04
+solve_y_time =
+   7.0000e-05
+create_y_time =
+   18.0306
+build_wk_time =
+    0.0041
+build_H_time =
+    0.0021
+solve_y_time =
+   1.6300e-04
+create_y_time =
+   25.4749
+build_wk_time =
+    0.0060
+build_H_time =
+    0.0034
+solve_y_time =
+   2.2600e-04
+create_y_time =
+   36.7520
+build_wk_time =
+    0.0076
+build_H_time =
+    0.0047
+solve_y_time =
+   2.9300e-04
+create_y_time =
+   46.6405
+build_wk_time =
+    0.0090
+build_H_time =
+    0.0062
+solve_y_time =
+   3.5300e-04
+ans =
+   11.0000  466.0748
+ans =
+   11.0000    0.1005
+ans =
+   11.0000  511.7888
+ans =
+   12.0000    0.0168
+ans =
+   12.0000   41.1695
+create_rtilde_time =
+    0.0017
+create_y_time =
+    5.6368
+build_wk_time =
+    0.0022
+build_H_time =
+    0.0011
+solve_y_time =
+   9.6000e-05
+create_y_time =
+   18.0315
+build_wk_time =
+    0.0046
+build_H_time =
+    0.0026
+solve_y_time =
+   1.6400e-04
+create_y_time =
+   28.9361
+build_wk_time =
+    0.0074
+build_H_time =
+    0.0042
+solve_y_time =
+   2.7400e-04
+create_y_time =
+   38.0126
+build_wk_time =
+    0.0096
+build_H_time =
+    0.0062
+solve_y_time =
+   3.5200e-04
+create_y_time =
+   45.6244
+build_wk_time =
+    0.0121
+build_H_time =
+    0.0088
+solve_y_time =
+   4.5100e-04
+ans =
+   12.0000  513.4505
+ans =
+   12.0000    0.1164
+ans =
+   12.0000  612.4520
+ans =
+   13.0000    0.0171
+ans =
+   13.0000   45.5382
+create_rtilde_time =
+    0.0021
+create_y_time =
+   10.7315
+build_wk_time =
+    0.0022
+build_H_time =
+    0.0010
+solve_y_time =
+   6.3000e-05
+create_y_time =
+   19.7473
+build_wk_time =
+    0.0050
+build_H_time =
+    0.0024
+solve_y_time =
+   1.6200e-04
+create_y_time =
+   28.4503
+build_wk_time =
+    0.0068
+build_H_time =
+    0.0037
+solve_y_time =
+   2.2700e-04
+create_y_time =
+   38.3441
+build_wk_time =
+    0.0084
+build_H_time =
+    0.0050
+solve_y_time =
+   2.9200e-04
+create_y_time =
+   46.7953
+build_wk_time =
+    0.0107
+build_H_time =
+    0.0076
+solve_y_time =
+   3.6600e-04
+ans =
+   13.0000  561.9727
+ans =
+   13.0000    0.1329
+ans =
+   13.0000  725.2608
+ans =
+   14.0000    0.0174
+ans =
+   14.0000   49.5968
+JD_Time =
+   1.4951e+03
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5928 - 0.0001i

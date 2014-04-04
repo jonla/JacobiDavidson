@@ -11,10 +11,11 @@ def davidsolver(A, guess, iterations, N_gmres, eps):
     '''
     This function is meant to compute the eigenpair with eigenvector
     overlapping the inital guess.
-
     TODO:
-        * Modify the correction equation to use a suitable
-        solver (GMRES) with a preconditioner.
+        Algoritm does not converge for complex matrixes.
+        This is probably because the .T function does not
+        take the complex conjugate, only the transpose.
+        -> Change to .conj().T for conjugated transpose.
     '''
     # Timing stuff
     startsolver = time.time()
@@ -30,7 +31,7 @@ def davidsolver(A, guess, iterations, N_gmres, eps):
         ## CORRECTION EQUATION
         startCEQ = time.time()
         # t = solvecorrectioneq(A, u, theta, r, n)
-        K = np.diag(np.diag(A)) - theta*np.identity(n)
+        K = np.diag(np.diag(A)) - theta * np.identity(n)
         t = gmres(A, K, u, r, theta, N_gmres)
         timeCEQ = timeCEQ + time.time() - startCEQ
 
@@ -38,9 +39,9 @@ def davidsolver(A, guess, iterations, N_gmres, eps):
         vplus = modgramshmidt(t, V)
 
         ## CONSTRUCT M, EXPAND V
-        M = np.vstack([np.hstack([M, dot(V.T, dot(A, vplus))]),
-                       np.hstack([dot(vplus.T, dot(A, V)),
-                                  dot(vplus.T, dot(A, vplus))])])
+        M = np.vstack([np.hstack([M, dot(V.conj().T, dot(A, vplus))]),
+                       np.hstack([dot(vplus.conj().T, dot(A, V)),
+                                  dot(vplus.conj().T, dot(A, vplus))])])
 
         V = np.hstack((V, vplus))
 
@@ -68,7 +69,7 @@ def davidsolver(A, guess, iterations, N_gmres, eps):
 def davidinit(A, guess):
     iterations = len(guess)
     V = guess / norm(guess)
-    theta = dot(V.T, dot(A, V))
+    theta = dot(V.conj().T, dot(A, V))
     M = theta
     r = dot(A, V) - theta * V
     return V, M, theta, r, iterations
@@ -99,14 +100,14 @@ def modgramshmidt(tin, V, kappah=0.25):
      #   t = t - dot(t, V) * V
 
     if len(V[1]) == 1:
-        t = t - dot(t.T, V) * V
+        t = t - dot(t.conj().T, V) * V
 
     else:
         for j in range(len(V.T)):
-            t = t - dot(t.T, V[:, [j]]) * V[:, [j]]
+            t = t - dot(t.conj().T, V[:, [j]]) * V[:, [j]]
         if norm(t) / norm(tin) < kappah:
             for j in range(len(V.T)):
-                t = t - dot(t.T, V[:, [j]]) * V[:, [j]]
+                t = t - dot(t.conj().T, V[:, [j]]) * V[:, [j]]
     return t / norm(t)
 
 
@@ -115,9 +116,9 @@ def gmres(A, K, u, r, theta, iter):
     # Parameters needed
     I = np.identity(len(u))  # Hoping this is saved as sparse?
     uhat = np.linalg.solve(K, u)
-    mu = dot(u.T, uhat)
+    mu = dot(u.conj().T, uhat)
     rhat = np.linalg.solve(K, r)
-    rtilde = rhat - dot(u.T, rhat) / mu * uhat
+    rtilde = rhat - dot(u.conj().T, rhat) / mu * uhat
 
     # Initiate GMRES
     beta = norm(rtilde)
@@ -129,11 +130,11 @@ def gmres(A, K, u, r, theta, iter):
         y = dot((A - theta * I), V[:, i])
         yhat = np.linalg.solve(K, y)
         # W[:, i] = yhat - dot(u.T, yhat) / mu * uhat
-        W = np.append(W, yhat - dot(u.T, yhat) / mu * uhat, 1)
+        W = np.append(W, yhat - dot(u.conj().T, yhat) / mu * uhat, 1)
         H = np.zeros([i + 2, i + 1], dtype=complex)
 
         for j in range(i):
-            H[j, i] = dot(W[:, i], V[:, j])
+            H[j, i] = dot(W[:, i].conj().T, V[:, j])
             W[:, j] = W[:, j] - H[j, i] * V[:, j]
 
         H[i + 1, i] = norm(W[:, i])
@@ -170,10 +171,10 @@ def davidsontest(k=100, TOL=1.e-3, N=45, hermitian=False, real=False,
 
     guess = vtarget + guessoffset * np.ones((k, 1))
     guess = guess / norm(guess)
-    theta1 = dot(guess.T, dot(A, guess))
+    theta1 = dot(guess.conj().T, dot(A, guess))
     print "Matrix size:", k
     print "Target eigenvalue:", eigtarget
-    print "Guess'*Vtarget:", dot(guess.T, vtarget)
+    print "Guess'*Vtarget:", dot(guess.conj().T, vtarget)
     print "Theta 1:", theta1
 
     theta, u = davidsolver(A, guess, N, N_gmres, TOL)
