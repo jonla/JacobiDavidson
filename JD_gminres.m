@@ -3,7 +3,7 @@
 
 
 
-function [lambda, e, res_hist, theta_approximations, count]=JDgminres(A,guess,GmresIterations)
+function [lambda, e, res_hist, theta_approximations, count]=JDgminres(A,guess,GmresIterations,tol2,Time)
 
 %%% INITIALIZE:   Sets tolerance levels for convergence,
 %%%              weight for the orthogonality of u to t,
@@ -11,7 +11,7 @@ function [lambda, e, res_hist, theta_approximations, count]=JDgminres(A,guess,Gm
 %%%               initial eigenvalue approximation and declares
 %%%               variables.
 tol=10000;
-tol2=10^-6;
+%tol2=10^-6;
 iterations=length(guess);
 I=sparse(eye(length(guess)));
 v1=guess/norm(guess);
@@ -64,7 +64,7 @@ for k=1:iterations
     
     
     Meig_time = Meig_time + toc(t3);
-    [k Meig_time]
+    M_EIG_TIME = [k Meig_time];
     
     t4 = tic;
     [~,indmax] = max(overlap);
@@ -77,10 +77,11 @@ for k=1:iterations
     %%%% Calculates Ritz pairs and residual vector
     u=V*s;
     res=A*u-theta*u;
-    
-    res_hist = [res_hist norm(res)];
+    disp('Residual norm:')
+    r_norm = norm(res)
+    res_hist = [res_hist r_norm];
     Ritz_time = Ritz_time + toc(t4);
-    [k Ritz_time]
+    RITZ_TIME = [k Ritz_time];
     
     %%% CORRECTION EQUATIONS
     if norm(res) > tol
@@ -93,7 +94,7 @@ for k=1:iterations
         
         
                
-    else if norm(res) > tol2
+    else if r_norm > tol2
             % orthogonal completion correction
             
             %%% MLDIVIDE                    
@@ -105,15 +106,16 @@ for k=1:iterations
             
 
             %%% GMRES
-                K = sparse(diag(diag(A))-theta*I);
+                
                 %t1 = tic;
                 %Ktilde = ((I-u*u')*K*(I-u*u'));
                 %tilde_time = tilde_time + toc(t1)
                 tStart = tic;
+                K = sparse(diag(diag(A))-theta*I);
                 t = dogmres(A,-res,theta,K,u,GmresIterations);
                 %t = gmres(A,-res,[],0.1,5,Ktilde);
                 gmres_time = gmres_time + toc(tStart);
-                [k gmres_time]
+                GMRES_TIME = [k gmres_time];
                 
             %%% Comparisons
                 %dogNorm = norm(t);
@@ -128,6 +130,13 @@ for k=1:iterations
             % Returns
             lambda=theta;
             e=u;
+            if strcomp(Time,'T')
+                disp('Timings:')
+                M_EIG_ = M_EIG_TIME
+                RITZ = RITZ_TIME
+                GMRES = GMRES_TIME
+                GS = GS_TIME
+                M_BUILD = M_TIME
             break
         end        
     end
@@ -148,7 +157,7 @@ for k=1:iterations
     v=t/norm(t);
     V=[V v];
     gs_time = gs_time + toc(t1);
-    [k gs_time]
+    GS_TIME = [k gs_time];
     
     
     
@@ -161,7 +170,7 @@ for k=1:iterations
     end
     M(k+1,k+1) = V(:,k+1)'*A*V(:,k+1);
     M_time = M_time + toc(t2);
-    [k M_time]
+    M_TIME = [k M_time];
     
     
     
