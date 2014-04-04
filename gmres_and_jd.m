@@ -112,7 +112,64 @@ for k=1:iterations
                 %tilde_time = tilde_time + toc(t1)
                 tStart = tic;
                 K = sparse(diag(diag(A))-theta*I);
-                t = dogmres(A,-res,theta,K,u,GmresIterations);
+               
+
+                iterationsprim = 4;
+                create_rtilde_time = 0;
+                create_y_time = 0;
+                build_H_time = 0;
+                solve_y_time = 0;
+                build_wk_time = 0;
+                mu = K\u;
+                t1prim = tic;
+                rhat = K\b;
+                rtilde = rhat-u'*rhat*mu/(u'*mu);
+                create_rtilde_time = create_rtilde_time + toc(t1prim)
+                beta = norm(rtilde);
+                Vprim = rtilde/beta;
+                W = [];
+                H = [];
+                x_history = [];
+                
+                for i=1:iterationsprim
+                    t2prim = tic;
+                    y = (A-theta*I)*Vprim(:,i);
+                    create_y_time =create_y_time + toc(t2prim)
+                    t5prim = tic;
+                    yhat = K\y;
+                    W(:,i) = yhat-u'*yhat/(u'*mu)*mu;
+                    build_wk_time = build_wk_time + toc(t5prim)
+                    t3prim = tic;
+                    for j=1:i
+                        H(j,i) = W(:,i)'*Vprim(:,j);
+                        W(:,i) = W(:,i) - H(j,i)*Vprim(:,j);
+                        
+                        
+                    end
+                    wk_norm = norm(W(:,i));
+                    if wk_norm < 10^-10
+                        
+                        x = Vprim*y;
+                        break
+                    end
+                    H(i+1,i) = wk_norm;
+                    build_H_time = build_H_time + toc(t3prim)
+                    
+                    t4prim = tic;
+                    y = H\[beta; zeros(i,1)];
+                    solve_y_time = solve_y_time + toc(t4prim)
+                    %[U,Sigma,Q] = svd(H);
+                    %y = 0;
+                    % for k = 1:i-1
+                    %     y = y+Q(:,k)*U(:,k)'*[beta; zeros(i,1)]/Sigma(k,k);
+                    % end
+                    
+                    
+                    
+                    
+                    Vprim(:,i+1) = W(:,i)/H(i+1,i);
+                end
+                t = Vprim(:,1:end-1)*y;
                 %t = gmres(A,-res,[],0.1,5,Ktilde);
                 gmres_time = gmres_time + toc(tStart);
                 GMRES_TIME = [k gmres_time];
@@ -179,63 +236,5 @@ for k=1:iterations
         
 end
 
-function [ x ] = dogmres( A, b, theta, K, u, iterations )
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
-create_rtilde_time = 0;
-create_y_time = 0;
-build_H_time = 0;
-solve_y_time = 0;
-build_wk_time = 0;
-I = sparse(eye(size(A)));
-mu = K\u;
-t1 = tic;
-rhat = K\b;
-rtilde = rhat-u'*rhat*mu/(u'*mu);
-create_rtilde_time = create_rtilde_time + toc(t1)
-beta = norm(rtilde);
-V = rtilde/beta;
-W = [];
-H = [];
-x_history = [];
 
-for i=1:iterations
-    t2 = tic;
-    y = (A-theta*I)*V(:,i);
-    create_y_time =create_y_time + toc(t2)
-    t5 = tic;
-    yhat = K\y;
-    W(:,i) = yhat-u'*yhat/(u'*mu)*mu;
-    build_wk_time = build_wk_time + toc(t5)
-    t3 = tic;
-    for j=1:i
-        H(j,i) = W(:,i)'*V(:,j);
-        W(:,i) = W(:,i) - H(j,i)*V(:,j);
-        
-        
-    end
-    wk_norm = norm(W(:,i));
-    if wk_norm < 10^-10
-        
-        x = V*y;
-        break
-    end
-    H(i+1,i) = wk_norm;
-    build_H_time = build_H_time + toc(t3)
-    
-    t4 = tic;
-    y = H\[beta; zeros(i,1)];
-    solve_y_time = solve_y_time + toc(t4)
-    %[U,Sigma,Q] = svd(H);
-    %y = 0;
-    % for k = 1:i-1
-    %     y = y+Q(:,k)*U(:,k)'*[beta; zeros(i,1)]/Sigma(k,k);
-    % end
-    
-    
-    
-    
-    V(:,i+1) = W(:,i)/H(i+1,i);
-end
-x = V(:,1:end-1)*y;
 
