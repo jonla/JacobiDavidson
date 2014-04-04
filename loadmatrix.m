@@ -11,9 +11,9 @@ if strcmp(CHAR, 'C')
     dim = 28224
 end
 
-path=strcat('/net/data1/nhqm2014/matrix', CHAR)
-pathr=strcat(path, '_real.bin')
-pathi=strcat(path, '_imag.bin')
+path=strcat('/net/data1/nhqm2014/matrix', CHAR);
+pathr=strcat(path, '_real.bin');
+pathi=strcat(path, '_imag.bin');
 
 
 fid_r = fopen(pathr);
