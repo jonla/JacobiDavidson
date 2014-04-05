@@ -2,7 +2,8 @@ function [ H ] = loadmatrix( CHAR )
 %loadmatrix: H = loadmatrix('CHAR')
 %   'CHAR' is the matrix name,
 %   ie matrixA, matrixB.
-%   currently 'CHAR' = 'A', 'B', 'C' or 'D'.
+%   currently 'CHAR' = 'A', 'B',
+%   'C', 'D' or 'F'.
 
 if strcmp(CHAR, 'A') || strcmp(CHAR, 'B')
     dim = 25600
@@ -10,7 +11,7 @@ end
 if strcmp(CHAR, 'C')
     dim = 28224
 end
-if strcmp(CHAR, 'D')
+if strcmp(CHAR, 'D') || strcmp(CHAR, 'F')
     dim = 30976;
 end
 
