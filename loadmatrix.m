@@ -2,13 +2,16 @@ function [ H ] = loadmatrix( CHAR )
 %loadmatrix: H = loadmatrix('CHAR')
 %   'CHAR' is the matrix name,
 %   ie matrixA, matrixB.
-%   currently 'CHAR' = 'A', 'B' or 'C'.
+%   currently 'CHAR' = 'A', 'B', 'C' or 'D'.
 
 if strcmp(CHAR, 'A') || strcmp(CHAR, 'B')
     dim = 25600
 end
 if strcmp(CHAR, 'C')
     dim = 28224
+end
+if strcmp(CHAR, 'D')
+    dim = 30976;
 end
 
 path=strcat('/net/data1/nhqm2014/matrix', CHAR);
