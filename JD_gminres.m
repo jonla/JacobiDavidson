@@ -102,11 +102,12 @@ for k=1:iterations
             
             
             tStart = tic;
-            K = sparse(diag(diag(A))-theta*I);
-            t = dogmres(A,-res,theta,K,u,GmresIterations);
-            %t = gmres(A,-res,[],0.1,5,Ktilde);
+            Kinv = inv(sparse(sparse(diag(diag(A)))-theta*I));
+            t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+            %t=Kinv*res;
             gmres_time = gmres_time + toc(tStart);
             GMRES_TIME = [k gmres_time];
+            
             
             
             
@@ -114,7 +115,7 @@ for k=1:iterations
             % Returns
             lambda=theta;
             e=u;
-            if strcomp(Time,'T')
+            if strcmp(Time,'T')
                 disp('Timings:')
                 M_EIG_ = M_EIG_TIME
                 RITZ = RITZ_TIME
@@ -172,5 +173,33 @@ for k=1:iterations
         count=count+1;
     end
     
+    
+    %%% Expands search space
+    v=t/norm(t);
+    V=[V v];
+    gs_time = gs_time + toc(t1);
+    GS_TIME = [k gs_time];
+    
+    
+    
+    %%% Constructs M
+    % This part could be improved by preallocating the size of M
+    t2 = tic;
+    W1 = A*(V(:,k+1));
+    W2 = V(:,k+1)'*A;
+    for m=1:k
+        M(m,k+1) = V(:,m)'*W1;
+        M(k+1,m) = W2*V(:,m);
+    end
+    M(k+1,k+1) = V(:,k+1)'*W1;
+    M_time = M_time + toc(t2);
+    M_TIME = [k M_time];
+    
+    
+    
+    count=count+1;
+end
+
+
 end
 
