@@ -1,0 +1,97 @@
+Tol =
+
+   1.0000e-10
+
+Eigval. it 1: 0.59547+3.7337e-05i
+Residual norm:
+r_norm =
+    0.0230
+Eigval. it 2: 0.59353-9.115e-06i
+Residual norm:
+r_norm =
+    0.0060
+Eigval. it 3: 0.59325-2.1773e-05i
+Residual norm:
+r_norm =
+    0.0030
+Eigval. it 4: 0.59286-6.5608e-05i
+Residual norm:
+r_norm =
+    0.0015
+Eigval. it 5: 0.59276-6.8592e-05i
+Residual norm:
+r_norm =
+    0.0015
+Eigval. it 6: 0.59277-8.0216e-05i
+Residual norm:
+r_norm =
+    0.0011
+Eigval. it 7: 0.59277-9.8434e-05i
+Residual norm:
+r_norm =
+   4.4889e-04
+Eigval. it 8: 0.59278-0.00012201i
+Residual norm:
+r_norm =
+   5.0714e-04
+Eigval. it 9: 0.59278-0.00011735i
+Residual norm:
+r_norm =
+   1.3056e-04
+Eigval. it 10: 0.59279-0.00011708i
+Residual norm:
+r_norm =
+   1.3515e-04
+Eigval. it 11: 0.59279-0.00011692i
+Residual norm:
+r_norm =
+   1.3996e-05
+Eigval. it 12: 0.59279-0.00011695i
+Residual norm:
+r_norm =
+   5.5544e-06
+Eigval. it 13: 0.59279-0.00011695i
+Residual norm:
+r_norm =
+   6.3879e-07
+Eigval. it 14: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   1.0358e-07
+Eigval. it 15: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   4.1737e-08
+Eigval. it 16: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   5.1648e-09
+Eigval. it 17: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   1.0773e-09
+Eigval. it 18: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   1.7776e-10
+Eigval. it 19: 0.59279-0.00011696i
+Residual norm:
+r_norm =
+   2.1214e-11
+Timings:
+M_EIG_ =
+   19.0000    0.4698
+RITZ =
+   19.0000   31.1854
+GMRES =
+   18.0000    0.1523
+GS =
+   18.0000    0.4303
+M_BUILD =
+   18.0000   58.6930
+JD_Time =
+   98.3885
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5928 - 0.0001i

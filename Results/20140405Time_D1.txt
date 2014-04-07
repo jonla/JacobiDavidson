@@ -1,0 +1,1076 @@
+
+Tol =
+
+   1.0000e-10
+
+Residual norm:
+r_norm =
+    0.0231
+{Undefined function or variable 'H'.
+Error in JD_gminres (line 114)
+                Kinv = sparse(1:iterations,1:iterations,1./(diag(H)-theta));
+Error in RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,5,Tol,'G');} 
+tic; RunJD toc
+{Attempt to execute SCRIPT RunJD as a function:
+/n/home/jonl/JacobiDavidson/RunJD.m} 
+tic, toc
+Elapsed time is 0.000007 seconds.
+tic, toc, toc
+Elapsed time is 0.000005 seconds.
+Elapsed time is 0.000117 seconds.
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+   1.0000e-10
+Residual norm:
+r_norm =
+    0.0231
+Residual norm:
+r_norm =
+    0.0029
+Residual norm:
+r_norm =
+   2.2799e-04
+Residual norm:
+r_norm =
+   8.3223e-05
+Residual norm:
+r_norm =
+   3.7900e-05
+Residual norm:
+r_norm =
+   6.0568e-06
+Residual norm:
+r_norm =
+   2.3282e-07
+Residual norm:
+r_norm =
+   2.1515e-08
+Residual norm:
+r_norm =
+   8.6983e-10
+Residual norm:
+r_norm =
+   1.5816e-11
+Residual norm:
+r_norm =
+   1.5816e-11
+Residual norm:
+r_norm =
+   5.3598e-11
+Residual norm:
+r_norm =
+   1.9735e-09
+Residual norm:
+r_norm =
+   2.0035e-09
+Residual norm:
+r_norm =
+   2.2313e-09
+Residual norm:
+r_norm =
+   2.0252e-09
+{Operation terminated by user during dogmres (line 23)
+
+In JD_gminres (line 115)
+                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,5,Tol,'G');} 
+whos
+  Name                 Size                     Bytes  Class     Attributes
+
+  H                28224x28224            12745506816  double    complex   
+  Tol                  1x1                          8  double              
+  dim                  1x1                          8  double              
+  guess            28224x1                     451584  double    complex   
+  init_lambda          1x1                         16  double    complex   
+  tStart_gm            1x1                          8  uint64              
+  which_state          1x1                          8  double              
+
+Tol
+Tol =
+   1.0000e-10
+5.35e-11 > Tol
+ans =
+     0
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+   1.0000e-10
+Residual norm:
+r_norm =
+    0.0231
+Residual norm:
+r_norm =
+    0.0029
+Residual norm:
+r_norm =
+   2.2799e-04
+Residual norm:
+r_norm =
+   8.3223e-05
+Residual norm:
+r_norm =
+   3.7900e-05
+Residual norm:
+r_norm =
+   6.0568e-06
+Residual norm:
+r_norm =
+   2.3282e-07
+Residual norm:
+r_norm =
+   2.1515e-08
+Residual norm:
+r_norm =
+   8.6983e-10
+Residual norm:
+r_norm =
+   1.5816e-11
+JD_Time =
+  134.6267
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5928 - 0.0001i
+Tol =
+   1.0000e-10
+Residual norm:
+r_norm =
+    0.0231
+Residual norm:
+r_norm =
+    0.0039
+Residual norm:
+r_norm =
+   9.8892e-04
+Residual norm:
+r_norm =
+    0.0023
+Residual norm:
+r_norm =
+   2.8080e-04
+Residual norm:
+r_norm =
+   3.5651e-04
+Residual norm:
+r_norm =
+   7.8905e-05
+Residual norm:
+r_norm =
+   1.2493e-05
+Residual norm:
+r_norm =
+   5.4891e-06
+Residual norm:
+r_norm =
+   5.5138e-07
+Residual norm:
+r_norm =
+   1.6974e-07
+Residual norm:
+r_norm =
+   5.7460e-08
+Residual norm:
+r_norm =
+   9.2730e-09
+Residual norm:
+r_norm =
+   2.3068e-09
+Residual norm:
+r_norm =
+   2.3844e-10
+Residual norm:
+r_norm =
+   8.4398e-11
+Timings:
+M_EIG_ =
+   16.0000    0.0904
+RITZ =
+   16.0000   17.3462
+GMRES =
+   15.0000    0.2370
+GS =
+   15.0000    0.5519
+M_BUILD =
+   15.0000   31.9798
+JD_Time =
+   57.5267
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5928 - 0.0001i
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.230629301047497
+Residual norm:
+r_norm =
+   0.134842227555761
+Residual norm:
+r_norm =
+   0.121373915091050
+Residual norm:
+r_norm =
+   0.215998664302279
+Residual norm:
+r_norm =
+   0.113537453661233
+Residual norm:
+r_norm =
+   0.119370111690299
+Residual norm:
+r_norm =
+   0.091669213984578
+Residual norm:
+r_norm =
+   0.081651260246657
+Residual norm:
+r_norm =
+   0.076292414500301
+Residual norm:
+r_norm =
+   0.164886447262724
+Residual norm:
+r_norm =
+   0.066746757199336
+Residual norm:
+r_norm =
+   0.089101033978756
+Residual norm:
+r_norm =
+   0.049269846143790
+Residual norm:
+r_norm =
+   0.047762464088934
+Residual norm:
+r_norm =
+   0.044890553190497
+Residual norm:
+r_norm =
+   0.083629147184319
+Residual norm:
+r_norm =
+   0.124410582626479
+Residual norm:
+r_norm =
+   0.132304541886884
+Residual norm:
+r_norm =
+   0.049511264677278
+Residual norm:
+r_norm =
+   0.041098007420912
+Residual norm:
+r_norm =
+   0.131429888483403
+Residual norm:
+r_norm =
+   0.044050513436086
+Residual norm:
+r_norm =
+   0.119636282390260
+Residual norm:
+r_norm =
+   0.122155980223907
+Residual norm:
+r_norm =
+   0.109136334007664
+Residual norm:
+r_norm =
+   0.037724185840410
+Residual norm:
+r_norm =
+   0.122847815402955
+Residual norm:
+r_norm =
+   0.144398138218754
+Residual norm:
+r_norm =
+   0.112316660095134
+Residual norm:
+r_norm =
+   0.035376100107677
+Residual norm:
+r_norm =
+   0.051588244119795
+Residual norm:
+r_norm =
+   0.035391699076241
+Residual norm:
+r_norm =
+   0.036229749091904
+Residual norm:
+r_norm =
+   0.035038924028045
+Residual norm:
+r_norm =
+   0.037240688323870
+Residual norm:
+r_norm =
+   0.071733144400376
+Residual norm:
+r_norm =
+   0.068922805798945
+Residual norm:
+r_norm =
+   0.065972714508631
+Residual norm:
+r_norm =
+   0.116848758928349
+Residual norm:
+r_norm =
+   0.110718291187587
+Residual norm:
+r_norm =
+   0.128023055678053
+Residual norm:
+r_norm =
+   0.104221837692812
+Residual norm:
+r_norm =
+   0.085066176500311
+Residual norm:
+r_norm =
+   0.092022917780889
+{Operation terminated by user during JD_gminres (line 171)
+
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,5,Tol,'T');} 
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.230629301047497
+Residual norm:
+r_norm =
+   0.123925731832630
+Residual norm:
+r_norm =
+   0.102757873510152
+Residual norm:
+r_norm =
+   0.205089118505056
+Residual norm:
+r_norm =
+   0.086137230438912
+Residual norm:
+r_norm =
+   0.060035265557616
+Residual norm:
+r_norm =
+   0.149257668420371
+Residual norm:
+r_norm =
+   0.153008574225629
+Residual norm:
+r_norm =
+   0.160066816248840
+Residual norm:
+r_norm =
+   0.055786892296621
+Residual norm:
+r_norm =
+   0.053620163974027
+Residual norm:
+r_norm =
+   0.095155731189533
+Residual norm:
+r_norm =
+   0.050851261259911
+Residual norm:
+r_norm =
+   0.094800310404643
+Residual norm:
+r_norm =
+   0.045069840141855
+Residual norm:
+r_norm =
+   0.043209013961183
+Residual norm:
+r_norm =
+   0.042810980057032
+Residual norm:
+r_norm =
+   0.118513350883931
+Residual norm:
+r_norm =
+   0.116802052900556
+Residual norm:
+r_norm =
+   0.080725896703767
+Residual norm:
+r_norm =
+   0.034340557645852
+Residual norm:
+r_norm =
+   0.037206772190708
+Residual norm:
+r_norm =
+   0.117918086448841
+Residual norm:
+r_norm =
+   0.103419248947426
+Residual norm:
+r_norm =
+   0.109238823219121
+Residual norm:
+r_norm =
+   0.051533644219130
+Residual norm:
+r_norm =
+   0.083339051417720
+Residual norm:
+r_norm =
+   0.084540971001413
+Residual norm:
+r_norm =
+   0.040887228742247
+Residual norm:
+r_norm =
+   0.033244092401387
+Residual norm:
+r_norm =
+   0.033711628553279
+Residual norm:
+r_norm =
+   0.037682279724920
+Residual norm:
+r_norm =
+   0.124910047317878
+Residual norm:
+r_norm =
+   0.103641466788920
+Residual norm:
+r_norm =
+   0.103409772976686
+Residual norm:
+r_norm =
+   0.030440838972978
+Residual norm:
+r_norm =
+   0.036256218976489
+Residual norm:
+r_norm =
+   0.104278369593614
+Residual norm:
+r_norm =
+   0.100478971634931
+Residual norm:
+r_norm =
+   0.091392783489574
+Residual norm:
+r_norm =
+   0.087083842928581
+Residual norm:
+r_norm =
+   0.030022042816189
+Residual norm:
+r_norm =
+   0.034168035468872
+Residual norm:
+r_norm =
+   0.078281265262933
+Residual norm:
+r_norm =
+   0.029542553390979
+Residual norm:
+r_norm =
+   0.045549722878121
+Residual norm:
+r_norm =
+   0.031664685096876
+Residual norm:
+r_norm =
+   0.035983939737853
+Residual norm:
+r_norm =
+   0.039154729748300
+Residual norm:
+r_norm =
+   0.026947448231567
+Residual norm:
+r_norm =
+   0.039742465696698
+Residual norm:
+r_norm =
+   0.107851486054847
+Residual norm:
+r_norm =
+   0.024567752991108
+Residual norm:
+r_norm =
+   0.030161195503977
+Residual norm:
+r_norm =
+   0.031180272625152
+Residual norm:
+r_norm =
+   0.029104967894650
+Residual norm:
+r_norm =
+   0.029516467611959
+Residual norm:
+r_norm =
+   0.091254357019729
+Residual norm:
+r_norm =
+   0.028687226461134
+Residual norm:
+r_norm =
+   0.079773386725098
+Residual norm:
+r_norm =
+   0.076770176774238
+Residual norm:
+r_norm =
+   0.096416259495108
+Residual norm:
+r_norm =
+   0.081406411795076
+Residual norm:
+r_norm =
+   0.074715181587204
+Residual norm:
+r_norm =
+   0.077364914428207
+Residual norm:
+r_norm =
+   0.067951822141637
+Residual norm:
+r_norm =
+   0.086288099186966
+Residual norm:
+r_norm =
+   0.071997056888838
+Residual norm:
+r_norm =
+   0.053408458560025
+Residual norm:
+r_norm =
+   0.047833349437324
+Residual norm:
+r_norm =
+   0.040569688790445
+Residual norm:
+r_norm =
+   0.065037534809112
+Residual norm:
+r_norm =
+   0.062293690588275
+Residual norm:
+r_norm =
+   0.018996340517231
+Residual norm:
+r_norm =
+   0.031455603910493
+Residual norm:
+r_norm =
+   0.025142794406056
+Residual norm:
+r_norm =
+   0.043961671966169
+Residual norm:
+r_norm =
+   0.023108497368955
+Residual norm:
+r_norm =
+   0.073786202556802
+Residual norm:
+r_norm =
+   0.090043524674458
+Residual norm:
+r_norm =
+   0.064468158480929
+Residual norm:
+r_norm =
+   0.083260638376188
+Residual norm:
+r_norm =
+   0.112678922364222
+Residual norm:
+r_norm =
+   0.111844324155982
+Residual norm:
+r_norm =
+   0.067711200747608
+Residual norm:
+r_norm =
+   0.067484385772786
+Residual norm:
+r_norm =
+   0.021377164841723
+Residual norm:
+r_norm =
+   0.023376219726012
+Residual norm:
+r_norm =
+   0.038757509748388
+Residual norm:
+r_norm =
+   0.061502068155978
+Residual norm:
+r_norm =
+   0.069706762726136
+Residual norm:
+r_norm =
+   0.063923832817393
+Residual norm:
+r_norm =
+   0.027081028146592
+Residual norm:
+r_norm =
+   0.030981403137436
+Residual norm:
+r_norm =
+   0.024546411561283
+Residual norm:
+r_norm =
+   0.025939329903893
+Residual norm:
+r_norm =
+   0.025114891490107
+Residual norm:
+r_norm =
+   0.026936669576880
+Residual norm:
+r_norm =
+   0.039051108736982
+Residual norm:
+r_norm =
+   0.029516145775250
+Residual norm:
+r_norm =
+   0.032403722977332
+Residual norm:
+r_norm =
+   0.031640581766175
+Residual norm:
+r_norm =
+   0.037924944946244
+Residual norm:
+r_norm =
+   0.026411600232645
+Residual norm:
+r_norm =
+   0.046155475952628
+Residual norm:
+r_norm =
+   0.065436066331127
+Residual norm:
+r_norm =
+   0.049038998458039
+Residual norm:
+r_norm =
+   0.043615272651619
+Residual norm:
+r_norm =
+   0.031662170545626
+Residual norm:
+r_norm =
+   0.053964993942597
+Residual norm:
+r_norm =
+   0.020694647244053
+Residual norm:
+r_norm =
+   0.020037941818499
+Residual norm:
+r_norm =
+   0.030892527819576
+Residual norm:
+r_norm =
+   0.023618843255498
+Residual norm:
+r_norm =
+   0.024862470248938
+Residual norm:
+r_norm =
+   0.025808048525736
+Residual norm:
+r_norm =
+   0.025172100238858
+Residual norm:
+r_norm =
+   0.019906964159226
+{Operation terminated by user during dogmres (line 9)
+
+In JD_gminres (line 115)
+                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,5,Tol,'T');} 
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.230629301047497
+GMRES_res =
+   1.156767378111000
+Residual norm:
+r_norm =
+   0.104290988285608
+GMRES_res =
+   3.654175767155391
+Residual norm:
+r_norm =
+   0.073119087219788
+GMRES_res =
+   1.813465910106303
+Residual norm:
+r_norm =
+   0.198452712178915
+GMRES_res =
+   1.036450063392806
+Residual norm:
+r_norm =
+   0.064627071058450
+GMRES_res =
+   1.674860251258223
+Residual norm:
+r_norm =
+   0.164161995270683
+GMRES_res =
+   1.234323775626438
+Residual norm:
+r_norm =
+   0.143838175415982
+GMRES_res =
+   1.806311985444856
+Residual norm:
+r_norm =
+   0.050419361929161
+GMRES_res =
+   1.545140782693425
+Residual norm:
+r_norm =
+   0.067476457717766
+GMRES_res =
+   2.905254196188632
+Residual norm:
+r_norm =
+   0.065764541663362
+GMRES_res =
+   3.073240200001685
+Residual norm:
+r_norm =
+   0.079403324477249
+GMRES_res =
+   2.527670801232582
+Residual norm:
+r_norm =
+   0.085642500934090
+GMRES_res =
+   2.463394499760113
+Residual norm:
+r_norm =
+   0.073849236867061
+GMRES_res =
+   2.732426557039693
+Residual norm:
+r_norm =
+   0.104631974720282
+GMRES_res =
+   1.229894813594231
+Residual norm:
+r_norm =
+   0.097725150754548
+GMRES_res =
+   0.976359601807038
+Residual norm:
+r_norm =
+   0.145708967118042
+{Operation terminated by user during dogmres (line 23)
+
+In JD_gminres (line 115)
+                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,10,Tol,'T');} 
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.230629301047497
+GMRES_res =
+   0.993865482602830
+Residual norm:
+r_norm =
+   0.108683060741504
+GMRES_res =
+   1.377270083967372
+Residual norm:
+r_norm =
+   0.102302093930688
+GMRES_res =
+   1.438542365209606
+Residual norm:
+r_norm =
+   0.196172025916090
+GMRES_res =
+   0.878000378975903
+Residual norm:
+r_norm =
+   0.096409477824778
+GMRES_res =
+   1.750839893776022
+Residual norm:
+r_norm =
+   0.084893035743078
+GMRES_res =
+   1.796095159364300
+Residual norm:
+r_norm =
+   0.063698931137074
+GMRES_res =
+   1.105174066912429
+Residual norm:
+r_norm =
+   0.142773858438796
+GMRES_res =
+   0.476986898450549
+Residual norm:
+r_norm =
+   0.064470957573185
+GMRES_res =
+   1.494284028192010
+Residual norm:
+r_norm =
+   0.066509691626521
+GMRES_res =
+   1.479418997983359
+Residual norm:
+r_norm =
+   0.064345587647084
+GMRES_res =
+   1.936864198090412
+Residual norm:
+r_norm =
+   0.054692000652744
+GMRES_res =
+   1.411846414696837
+Residual norm:
+r_norm =
+   0.156716629311353
+GMRES_res =
+   1.257230822173477
+Residual norm:
+r_norm =
+   0.114251852969761
+GMRES_res =
+   0.811426674921468
+Residual norm:
+r_norm =
+   0.102700551630275
+{Operation terminated by user during dogmres (line 9)
+
+In JD_gminres (line 115)
+                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,20,Tol,'T');} 
+whos
+  Name                 Size                     Bytes  Class     Attributes
+
+  H                28224x28224            12745506816  double    complex   
+  JD_Time              1x1                          8  double              
+  T_david              1x1                          8  double              
+  T_gmres              1x1                          8  double              
+  Tol                  1x1                          8  double              
+  ans                 16x1                        128  double              
+  count                1x1                          8  double              
+  dim                  1x1                          8  double              
+  guess            28224x1                     451584  double    complex   
+  init_lambda          1x1                         16  double    complex   
+  lambda               1x1                         16  double    complex   
+  reshist              1x16                       128  double              
+  state            28224x1                     451584  double    complex   
+  tStart_gm            1x1                          8  uint64              
+  theta_hist           1x16                       256  double    complex   
+  which_state          1x1                          8  double              
+
+H=0.5*H+0.5*diag(diag(H));
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.115314650523748
+GMRES_res =
+   1.183530592012439
+Residual norm:
+r_norm =
+   0.076251072257684
+GMRES_res =
+   1.064108643423981
+Residual norm:
+r_norm =
+   0.077022163809468
+GMRES_res =
+   0.641191393098274
+Residual norm:
+r_norm =
+   0.070259982369338
+GMRES_res =
+   0.795102337965341
+Residual norm:
+r_norm =
+   0.049525767941765
+GMRES_res =
+   0.340873514205523
+Residual norm:
+r_norm =
+   0.053249606026146
+GMRES_res =
+   0.630173430818516
+Residual norm:
+r_norm =
+   0.032367621717343
+{Operation terminated by user during dogmres (line 9)
+
+In JD_gminres (line 115)
+                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+In RunJD (line 63)
+[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,20,Tol,'T');} 
+H=0.2*H+0.8*diag(diag(H));
+tic; RunJD, toc
+Guess vector and initial theta calculated
+Running JD...
+Tol =
+     1.000000000000000e-10
+Residual norm:
+r_norm =
+   0.023062930104750
+GMRES_res =
+     1.412034861455960e-05
+Residual norm:
+r_norm =
+   0.002840010655781
+GMRES_res =
+     1.910193070390049e-11
+Residual norm:
+r_norm =
+     2.254336978200123e-04
+GMRES_res =
+     1.010593117970684e-11
+Residual norm:
+r_norm =
+     7.808523233206336e-05
+GMRES_res =
+     2.081842793745061e-11
+Residual norm:
+r_norm =
+     5.224199342022651e-07
+GMRES_res =
+     1.534456689070211e-13
+Residual norm:
+r_norm =
+     1.059585449565052e-10
+GMRES_res =
+     6.455172926954194e-17
+Residual norm:
+r_norm =
+     6.642768684984428e-15
+Timings:
+M_EIG_ =
+   7.000000000000000   0.001081000000000
+RITZ =
+   7.000000000000000   8.513535000000001
+GMRES =
+   1.0e+02 *
+   0.060000000000000   1.684902990000000
+GS =
+   6.000000000000000   0.095429000000000
+M_BUILD =
+   6.000000000000000  15.169979000000001
+JD_Time =
+     1.998409250000000e+02
+JD complete!
+Found eigenvalue:
+lambda =
+  0.592782693858223 - 0.000102561715402i
+
+Tol =
+
+   1.0000e-10
+
+Residual norm:
+r_norm =
+    0.0231
+Residual norm:
+r_norm =
+    0.0026
+Residual norm:
+r_norm =
+    0.0012
+Residual norm:
+r_norm =
+   9.2189e-04
+Residual norm:
+r_norm =
+   3.2633e-04
+Residual norm:
+r_norm =
+   5.7451e-05
+Residual norm:
+r_norm =
+   1.9327e-05
+Residual norm:
+r_norm =
+   8.0999e-06
+Residual norm:
+r_norm =
+   1.4219e-06
+Residual norm:
+r_norm =
+   6.7788e-07
+Residual norm:
+r_norm =
+   5.3378e-07
+Residual norm:
+r_norm =
+   5.6285e-08
+Residual norm:
+r_norm =
+   2.8202e-08
+Residual norm:
+r_norm =
+   3.8147e-09
+Residual norm:
+r_norm =
+   2.2199e-10
+Residual norm:
+r_norm =
+   1.1414e-10
+Residual norm:
+r_norm =
+   4.8888e-12
+Timings:
+M_EIG_ =
+   17.0000    0.0662
+RITZ =
+   17.0000   16.6023
+GMRES =
+   16.0000    0.1027
+GS =
+   16.0000    0.2786
+M_BUILD =
+   16.0000   31.0608
+JD_Time =
+   52.7672
+JD complete!
+Found eigenvalue:
+lambda =
+   0.5928 - 0.0001i
