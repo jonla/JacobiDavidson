@@ -17,7 +17,7 @@ dim=length(guess);
 I=sparse(eye(dim));
 v1=guess/norm(guess);
 V=[v1];
-W=[A*v1];
+W=[A*v1/norm(A*v1)];
 theta_init=v1'*A*v1;
 
 
@@ -44,7 +44,7 @@ for m = 1:maxit
         
         %%% Finds eigenpar with largest overlapp to v0
         t3 = tic;
-        [eigvec, eigval] = eig(inv(M));
+        [eigvec, eigval] = eig(M);
         
         overlap = zeros(k,1);
         for j=1:k
@@ -62,8 +62,9 @@ for m = 1:maxit
         theta_approximations = [theta_approximations theta];
         
         %%%% Calculates Ritz pairs and residual vector
-        u=V*s;
-        res=A*u-theta*u;
+        u=V*s/norm(V*s);
+        uhat=A*u;
+        res=uhat-theta*u;
         disp('Residual norm:')
         r_norm = norm(res)
         res_hist = [res_hist r_norm];
@@ -83,7 +84,7 @@ for m = 1:maxit
                 disp('Guided with updated theta')
                 tStart = tic;
                 Kinv = sparse(1:dim,1:dim,1./(diag(A)-theta));
-                t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+                t = harm_gmres(A,-res,theta,Kinv,u,uhat,GmresIterations);
                 %t=Kinv*res;
                 gmres_time = gmres_time + toc(tStart);
                 GMRES_TIME = [k gmres_time];
@@ -105,6 +106,7 @@ for m = 1:maxit
         end
         disp('Done!')
         
+        
         %%% orthogonalize V %%%
         disp('Orthogonalzing...')
         if mod(k,15) == 0
@@ -118,10 +120,10 @@ for m = 1:maxit
             t1 = tic;
             for i=1:k
                 t_prim=t;
-                t=t-V(:,i)'*t*V(:,i);
+                t=t-V(:,i)*W(:,i)'*t;
                 if norm(t)/norm(t_prim) < 0.250
                     for j=1:k
-                        t=t-V(:,j)'*t*V(:,j);
+                        t=t-V(:,j)*W(:,j)'*t;
                     end
                 end
             end
@@ -130,7 +132,7 @@ for m = 1:maxit
         
         
         %%% Expands search space V
-        v=t/norm(t);
+        v=t/norm(W(:,i));
         V=[V v];
         gs_time = gs_time + toc(t1);
         GS_TIME = [k gs_time];
@@ -142,29 +144,30 @@ for m = 1:maxit
             w=w-W(:,i)'*w*W(:,i);
             if norm(w)/norm(w_prim) < 0.250
                 for j=1:k
-                    w=w-W(:,i)'*w*W(:,i);
+                    w=w-W(:,i)*W(:,i)'*w;
                 end
             end
         end
+        w=w/norm(w);
         W = [W w];
         
         %%% Constructs M on the orthogonal space of AV
         % This part could be improved by preallocating the size of M
         t2 = tic;
         disp('Building M...')
-        W1 = A*(V(:,k+1));
-        W2 = V(:,k+1)'*A;
+       
+        
         for m=1:k
-            M(m,k+1) = W(:,m)'*V(k+1);
+            M(m,k+1) = W(:,m)'*V(:,k+1);
             M(k+1,m) = W(:,k+1)'*V(:,m);
         end
         M(k+1,k+1) = W(:,k+1)'*V(:,k+1);
         M_time = M_time + toc(t2);
         M_TIME = [k M_time];
+        M = inv(M);
         
         
-        
-        count=count+1;
+        count=count+1
     end
     %%% Resetting spaces and variables
     disp('RESTARTING...')
