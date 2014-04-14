@@ -6,7 +6,7 @@ dim = size(A,1);
 m_max = 50;
 m_min = 5;
 
-%%% INITUAL PARAMETERS
+%%% INITIAL PARAMETERS
 t = guess;
 k = 0;
 m = 0;
