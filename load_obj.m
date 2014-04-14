@@ -9,3 +9,7 @@ H = reshape(H, dim, dim);
 reso_states = fread(fid, [2 1], 'int');
 check = fread(fid, [1 1], 'long');
 fclose(fid);
+
+clear check
+clear fid
+clear ans
