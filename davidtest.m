@@ -1,13 +1,13 @@
 %% Symmetrisk matris storlek k
 clc
-k = 1000;
+k = 100;
 A=[];
 for i=1:k
-    %A(i,i)=2*rand-1;
-    A(i,i)=100*complex(rand, 0.1*rand);
+    A(i,i)=i*10*(2*rand-1);
+    %A(i,i)=100*complex(rand, 0.1*rand);
     for j=i+1:k
-        %A(j,i)=2*rand-1;
-        A(j,i)=complex(2*rand-1, 2*rand-1);
+        A(j,i)=2*rand-1;
+        %A(j,i)=complex(2*rand-1, 2*rand-1);
         A(i,j)=A(j,i);
     end
 end

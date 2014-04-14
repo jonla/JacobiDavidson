@@ -51,8 +51,9 @@ for k = 1:iterations
         %%% Davidsons CEQ
         tStart = tic;
         Kinv = sparse(1:dim,1:dim,1./(diag(A)-theta));
-        %t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
-        t = Kinv*res;
+        GmresIterations=5;
+        t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
+        %t = Kinv*res;
 
         ceq_time = ceq_time + toc(tStart);
     else

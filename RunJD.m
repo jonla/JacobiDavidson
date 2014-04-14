@@ -46,7 +46,8 @@
 %%% ===== Sets initial guess ===== %%%
 %    Resonance states for sp matrices are 120 and 129. A suitable
 %    guess could be 160*129+121 = 20761
-which_state=20761; 
+dim=size(H,1);
+%which_state=1300; 
 guess=zeros(dim,1);
 guess(which_state,1) = 1+1i;
 init_lambda=guess'*H*guess;
@@ -59,7 +60,7 @@ clc
 diary('Timelogs.txt')
 format compact
 tStart_gm = tic ;  
-[lambda, state, reshist, theta_hist, count] = JD_gminres(H,guess,5);
+[lambda, state, reshist, theta_hist, count] = davidson(H,guess,1e-10,'T');
 JD_Time = toc(tStart_gm)
 
 disp('JD complete!')

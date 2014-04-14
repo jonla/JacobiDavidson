@@ -11,7 +11,7 @@ function [lambda, e, res_hist, theta_approximations, count]=JD_gminres(A,guess,G
 %%%               initial eigenvalue approximation and declares
 %%%               variables.
 tol=10000;
-maxit = 5;
+maxit = 10;
 %tol2=10^-6;
 dim=length(guess);
 I=sparse(eye(length(guess)));
@@ -81,7 +81,7 @@ for m = 1:maxit
                 
                 disp('Guided with updated theta')
                 tStart = tic;
-                Kinv = sparse(1:dim,1:dim,1./(diag(A)-theta*I));
+                Kinv = sparse(1:dim,1:dim,1./(diag(A)-theta));
                 t = dogmres(A,-res,theta,Kinv,u,GmresIterations);
                 %t=Kinv*res;
                 gmres_time = gmres_time + toc(tStart);
